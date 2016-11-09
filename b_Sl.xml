@@ -1,33 +1,28 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="comment_comment" id="2" x="56" y="17">
-    <field name="TEXT">hi</field>
+  <block type="movement_forward" id="21" x="56" y="43">
     <next>
-      <block type="movement_forward" id="21">
+      <block type="robot_delay" id="32" inline="true">
+        <value name="DELAY">
+          <block type="math_random" id="42"></block>
+        </value>
         <next>
-          <block type="robot_delay" id="32" inline="true">
-            <value name="DELAY">
-              <block type="math_random" id="42"></block>
-            </value>
+          <block type="movement_stop" id="54">
             <next>
-              <block type="movement_stop" id="54">
+              <block type="robot_delay" id="96" inline="true">
+                <value name="DELAY">
+                  <block type="math_number" id="85">
+                    <field name="NUM">300</field>
+                  </block>
+                </value>
                 <next>
-                  <block type="robot_delay" id="96" inline="true">
+                  <block type="robot_delay" id="185" inline="true">
                     <value name="DELAY">
-                      <block type="math_number" id="85">
-                        <field name="NUM">300</field>
+                      <block type="math_number" id="201">
+                        <field name="NUM">10000</field>
                       </block>
                     </value>
                     <next>
-                      <block type="robot_delay" id="185" inline="true">
-                        <value name="DELAY">
-                          <block type="math_number" id="201">
-                            <field name="NUM">10000</field>
-                          </block>
-                        </value>
-                        <next>
-                          <block type="movement_stop" id="238"></block>
-                        </next>
-                      </block>
+                      <block type="movement_stop" id="238"></block>
                     </next>
                   </block>
                 </next>
